@@ -1,0 +1,11 @@
+{
+  "name": "dosa-menu",
+  "version": "1.0.0",
+  "description": "Dosa Menu Website",
+  "scripts": {
+    "start": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm start\""
+  },
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
+}

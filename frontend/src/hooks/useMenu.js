@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { getMenuItems } from '../services/menuService';
+export { getMenuItems } from '../services/menuService';
 
-const useMenu = () => {
+export const useMenu = () => {
   const [menuItems, setMenuItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -23,5 +23,3 @@ const useMenu = () => {
 
   return { menuItems, loading, error };
 };
-
-export default useMenu;

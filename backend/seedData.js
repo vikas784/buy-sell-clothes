@@ -1,4 +1,3 @@
-const mongoose = require('mongoose');
 const MenuItem = require('./models/MenuItem');
 require('dotenv').config();
 
@@ -43,15 +42,10 @@ const sampleMenuItems = [
 
 const seedDatabase = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    });
-
-    console.log('Connected to MongoDB');
+    console.log('Starting database seeding...');
 
     // Clear existing data
-    await MenuItem.deleteMany({});
+    await MenuItem.deleteMany();
     console.log('Cleared existing menu items');
 
     // Insert sample data
